@@ -29,6 +29,27 @@ You're reading it! Below I describe how I addressed each rubric point and where 
 #### 1. Explain the functionality of what's provided in `motion_planning.py` and `planning_utils.py`
 These scripts contain a basic planning implementation that includes...
 
+planning_utils.py : I reused most of the heler functions that were implemented during the excercies. Made few modifications to customize them for the project.
+
+create_grid() : Accepts obstacle data, altitude & safety distance. It returns a grid representation of a 2D configuration space. Customized this function to return north_offset and east_offsets (grid centers)
+
+Action class : An action is represented by a 3 element tuple. The first 2 values are the delta of the action relative
+ to the current grid position. The third and final value is the cost of performing the action. Most of the code is from the class exercises. Customized this class to include a change in diagonal direction (delta in Norht East, North West, South East, South West)
+
+valid_actions(): Returns a list of valid actions given a grid and current node. Code from exercise, but customized to include Norht East, North West, South East, South West
+
+a_star() : A grid based implementation of A* search which returns a path from a given start point to a goal destination
+
+heuristic() : Calculates the Euclidean distance between a given point and the goal. The heuristic is used as an approximation to guide A* search and make it more efficient to return a path
+
+point() :  Returns a 3D point as a numpy array
+
+collinearity_check():  Returns True if 3 points are collinear within the threshold set by Epsilon (float implementation)
+
+prune_path() :  Prunes the path returned by A* search. It uses collinearity_check() to remove unecessary waypoints
+
+bres_prune() : Uses Bresenham ray tracing instead of collinearity to prune the path of unecessary waypoints
+
 And here's a lovely image of my results (ok this image has nothing to do with it, but it's a nice example of how to include images in your writeup!)
 ![Top Down View](./misc/high_up.png)
 
