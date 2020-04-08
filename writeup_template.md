@@ -29,7 +29,7 @@ You're reading it! Below I describe how I addressed each rubric point and where 
 #### 1. Explain the functionality of what's provided in `motion_planning.py` and `planning_utils.py`
 These scripts contain a basic planning implementation that includes...
 
-planning_utils.py : I reused most of the helper functions that were implemented during the excercies. Made few modifications to customize them for the project.
+##### planning_utils.py : I reused most of the helper functions that were implemented during the excercies. Made few modifications to customize them for the project.
 
 create_grid() : Accepts obstacle data, altitude & safety distance. It returns a grid representation of a 2D configuration space. Customized this function to return north_offset and east_offsets (grid centers)
 
@@ -51,7 +51,7 @@ prune_path() :  Prunes the path returned by A* search. It uses collinearity_chec
 bres_prune() : Uses Bresenham ray tracing instead of collinearity to prune the path of unecessary waypoints
 
 
-motion_planning.py : Implements motion planning using basic grid search. Uses helper functions from planning_utils.py. It plans the motion based on grid start, grid goal, drone altitude and drone safe distance.
+##### motion_planning.py : Implements motion planning using basic grid search. Uses helper functions from planning_utils.py. It plans the motion based on grid start, grid goal, drone altitude and drone safe distance.
 
 Most of the states and call back registrations are based on logic from the backyard fyler project.
 
@@ -155,8 +155,8 @@ For this step you can use a collinearity test or ray tracing method like Bresenh
 Initially collinearity_check() was used to prune the path returned by a_star().
 Once i updated to Bresenham, the number of way points drastically reduced.
 
-# Replacing collinearity with Bresenham !
-def bres_prune(grid, path):
+###### Replacing collinearity with Bresenham !
+    def bres_prune(grid, path):
     """
     Use the Bresenham module to trim uneeded waypoints from pruned path
     """
