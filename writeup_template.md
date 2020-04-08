@@ -61,19 +61,13 @@ Motion Planning Class : Accepts udacity drone.
 
 Several call backs and transition functions are implemented to help update the drones position, velocity and in transitioning between states.
 
-Once the dron is initialized then plan_path() helps plan the path.
+Once the drone is initialized then plan_path() helps plan the path.
 
 
 
 And here's a lovely image of my results (ok this image has nothing to do with it, but it's a nice example of how to include images in your writeup!)
 ![Top Down View](./misc/high_up.png)
 
-Here's | A | Snappy | Table
---- | --- | --- | ---
-1 | `highlight` | **bold** | 7.41
-2 | a | b | c
-3 | *italic* | text | 403
-4 | 2 | 3 | abcd
 
 ### Implementing Your Path Planning Algorithm
 
@@ -181,6 +175,9 @@ Once i updated to Bresenham, the number of way points drastically reduced.
             i += 1
     return pruned_path
   
+Here's the pictures of route plan!
+![Basic Route](./charts/plan_route.png)
+![Pruned Route](./charts/plan_route_pruned.png)
 
 ### Execute the flight
 #### 1. Does it work?
