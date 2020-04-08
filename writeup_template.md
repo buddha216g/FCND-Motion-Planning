@@ -183,6 +183,12 @@ Here's the pictures of route plan!
 #### 1. Does it work?
 It works!
 
+Here's the pictures of Drone Flying!
+![Aerial Route](./charts/MP_Aerial.png)
+![Building Route](./charts/MP_Building.png)
+![Street Route](./charts/MP_Street.png)
+
+
 ### Double check that you've met specifications for each of the [rubric](https://review.udacity.com/#!/rubrics/1534/view) points.
   
 # Extra Challenges: Real World Planning
